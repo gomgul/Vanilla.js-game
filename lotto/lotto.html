@@ -29,16 +29,16 @@
     const value = spliceArray[0]; // 배열에 들어 있는 값을 꺼내어
     shuffle.push(value); // shuffle 배열에 넣기
   }
-  console.log(shuffle);
+  
   const winBalls = shuffle.slice(0, 6).sort((a, b) => a - b);
   const bonus = shuffle[6];
   console.log(winBalls, bonus);
 
   const $result = document.querySelector('#result');
-  const drawBall = (number, $parent) => {
+  const drawBall = (num, $parent) => {
     const $ball = document.createElement('div');
-    $ball.className = 'ball';
-    $ball.textContent = number;
+    $ball.className = 'ball'; //css 줄려고 className 준거다
+    $ball.textContent = num;
     $parent.appendChild($ball);
   };
 
